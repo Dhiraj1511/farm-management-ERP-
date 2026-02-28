@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farm ERP Core - Login</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg, #d6f0dc, #e8f5ec);
+}
+
+.container{
+    width:900px;
+    height:520px;
+    display:flex;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Left Section */
+.left{
+    width:50%;
+    background: linear-gradient(135deg,#0f7a36,#0a5c28);
+    color:white;
+    padding:50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.left h1{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.left p{
+    font-size:13px;
+    margin-bottom:40px;
+    opacity:0.9;
+}
+
+.features{
+    list-style:none;
+}
+
+.features li{
+    margin-bottom:18px;
+    font-size:14px;
+}
+
+.features li::before{
+    content:"✔";
+    margin-right:10px;
+    color:#a4ffbf;
+}
+
+
+.right{
+    width:50%;
+    background:white;
+    padding:50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.right h2{
+    font-size:26px;
+    margin-bottom:8px;
+}
+
+.right small{
+    color:#666;
+    margin-bottom:25px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    font-size:13px;
+    margin-bottom:5px;
+    margin-top:10px;
+}
+
+input, select{
+    padding:10px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    outline:none;
+    font-size:14px;
+}
+
+input:focus, select:focus{
+    border-color:#0f7a36;
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:10px;
+    font-size:12px;
+}
+
+.row a{
+    text-decoration:none;
+    color:#0f7a36;
+    font-weight:500;
+}
+
+.login-btn{
+    margin-top:20px;
+    padding:12px;
+    border:none;
+    background:#0f7a36;
+    color:white;
+    font-size:15px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.login-btn:hover{
+    background:#0a5c28;
+}
+
+.divider{
+    text-align:center;
+    margin:15px 0;
+    font-size:12px;
+    color:#888;
+}
+
+.otp-btn{
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    background:#f7f7f7;
+    cursor:pointer;
+    font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Left Side -->
+    <div class="left">
+        <h1>🌾 Farm ERP Core</h1>
+        <p>Powered by Dhiraj Patel</p>
+
+        <ul class="features">
+            <li>Smart Crop & Season Management</li>
+            <li>Real-time Labor & Inventory Tracking</li>
+            <li>Automated Cost Allocation</li>
+            <li>Secure Role-Based Access</li>
+        </ul>
+    </div>
+
+
+    <div class="right">
+        <h2>Welcome Back</h2>
+        <small>Please enter your details to access your dashboard.</small>
+
+        <form>
+            <label>Select Role</label>
+            <select>
+                <option>Admin</option>
+                <option>Manager</option>
+                <option>Field Staff</option>
+            </select>
+
+            <label>Mobile Number or Email</label>
+            <input type="text" placeholder="admin@tekizz.com">
+
+            <label>Password</label>
+            <input type="password" placeholder="****">
+
+            <div class="row">
+                <div>
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <a href="#">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="login-btn">Secure Login</button>
+
+            <div class="divider">OR</div>
+
+            <button type="button" class="otp-btn">📱 Login with OTP (Field Staff)</button>
+
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
